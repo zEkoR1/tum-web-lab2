@@ -1,0 +1,198 @@
+/* Global Styles */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Navigation */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.hero {
+    background: url('https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg')
+    no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn-cta {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero .btn-cta:hover {
+    background-color: #e68a00;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Fleet Section */
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fleet-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.fleet-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.fleet-card h3 {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+}
+
+.fleet-card p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* Pricing Section */
+.pricing-table {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.pricing-plan {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 2rem;
+}
+
+.pricing-plan h3 {
+    margin-bottom: 1rem;
+}
+
+.pricing-plan p.price {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: #ff9900;
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.contact-form button:hover {
+    background-color: #e68a00;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
