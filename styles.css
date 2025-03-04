@@ -3,9 +3,12 @@ body {
     background-color: #f4f4f4;
     color: #333;
     font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigation */
+/* --- Navigation (Desktop) --- */
 header {
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -22,11 +25,16 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
+    text-decoration: none;
 }
 
+/* Base nav menu for desktop */
 nav ul {
-    display: flex;
+    list-style: none;
+    display: flex; /* Horizontal layout for desktop */
     gap: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -41,6 +49,47 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- Mobile (max-width: 768px) --- */
+@media (max-width: 768px) {
+
+    /* Show Hamburger, hide normal nav layout by default */
+    .nav-toggle {
+        display: block; /* Show the hamburger icon on mobile */
+    }
+
+    /* On mobile, we want a dropdown style, so we hide the nav by default */
+    nav ul {
+        display: none;                 /* Hidden by default */
+        flex-direction: column;        /* Vertical list */
+        border-top: 1px solid #eee;
+        margin-top: 1rem;
+        width: 100%;                   /* Full width under the header */
+    }
+
+    /* When .show-menu is toggled, the nav appears as a block (dropdown) */
+    nav ul.show-menu {
+        display: block;
+    }
+
+    /* Links become full-width for easier tapping */
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Hero Section */
 .hero {
     background: url('https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg')
     no-repeat center center/cover;
@@ -88,6 +137,17 @@ section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+/* Mobile-only Section */
+.mobile-only {
+    display: none; /* Hidden on desktop by default */
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 2rem auto;
 }
 
 /* Fleet Section */
@@ -150,7 +210,6 @@ section h2 {
 }
 
 /* Contact Section */
-/* Contact Section */
 #contact {
     background-color: #fafafa; /* Subtle background for contrast */
     padding: 4rem 2rem;
@@ -159,7 +218,6 @@ section h2 {
 
 .contact-form {
     display: inline-block;
-    /*max-width: 700px;*/
     width: 45%;
     margin: 0 auto;
     background-color: #fff;
@@ -173,7 +231,7 @@ section h2 {
     margin-bottom: 0.5rem;
     font-weight: 600;
     text-align: left;
-    margin-left:2rem
+    margin-left: 2rem;
 }
 
 .contact-form input,
@@ -185,8 +243,6 @@ section h2 {
     border-radius: 4px;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
-    /*margin-right: 10rem;*/
-
 }
 
 .contact-form input:focus,
@@ -219,9 +275,123 @@ footer {
     padding: 1rem;
     border-top: 1px solid #eee;
 }
+
+/* Images */
 img {
     display: block;
     width: 100%;
     height: auto;
 }
 
+/* Mascot Styles */
+.mascot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    cursor: pointer;
+
+    /* Appear after a delay */
+    opacity: 0;
+    animation: mascotAppear 1s forwards;
+    animation-delay: 3s; /* Show up after 3 seconds */
+}
+
+.mascot img {
+    width: 100%;
+    animation: mascotBounce 2s infinite ease-in-out;
+}
+
+.mascot-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff9900;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mascot:hover .mascot-tooltip {
+    display: block;
+}
+
+@keyframes mascotAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mascotBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .contact-form {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: auto;
+        padding: 4rem 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn-cta {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+
+    .mobile-only {
+        display: block; /* Make this section visible only on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+}

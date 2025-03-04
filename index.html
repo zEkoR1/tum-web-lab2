@@ -11,20 +11,38 @@
 
 <header>
   <div class="nav-logo">CarRent</div>
+
+  <div class="nav-toggle" id="navToggle">&#9776;</div>
+
   <nav>
-    <ul>
+    <ul id="navMenu">
       <li><a href="#hero">Home</a></li>
       <li><a href="#fleet">Fleet</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show-menu');
+    });
+  </script>
+
 </header>
 
 <section class="hero" id="hero">
   <h1>Rent a Car and Hit the Road</h1>
   <p>Premium cars at affordable prices. Book your ride today!</p>
   <button class="btn-cta" onclick="window.location.href='#fleet'">Browse Fleet</button>
+</section>
+
+<!-- Mobile-only section -->
+<section class="mobile-only">
+  <h2>Exclusive Mobile Offer!</h2>
+  <p>Rent for 3 days or more and get 15% off when you book through our mobile site.</p>
 </section>
 
 <section id="fleet">
@@ -90,9 +108,17 @@
     </form>
   </div>
 </section>
+
 <footer>
   <p>© 2025 CarRent Inc. All rights reserved. Please Contact Maxim Comarov for details.</p>
 </footer>
+
+<!-- Mascot -->
+<div class="mascot">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Icon-carpng.png/120px-Icon-carpng.png"
+       alt="Car Mascot" />
+  <div class="mascot-tooltip">Hi! Need help booking a car?</div>
+</div>
 
 </body>
 </html>
