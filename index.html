@@ -10,28 +10,33 @@
 <body>
 
 <header>
+  <!-- Logo - centered on mobile -->
   <div class="nav-logo">CarRent</div>
 
-  <div class="nav-toggle" id="navToggle">&#9776;</div>
-
-  <nav>
-    <ul id="navMenu">
+  <!-- Desktop Navigation - hidden on mobile -->
+  <nav class="desktop-nav">
+    <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#fleet">Fleet</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <script>
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
 
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('show-menu');
-    });
-  </script>
-
+  <!-- Mobile Navigation using details/summary - shown only on mobile -->
+  <details class="mobile-menu">
+    <summary class="nav-toggle">☰</summary>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </details>
 </header>
+
 
 <section class="hero" id="hero">
   <h1>Rent a Car and Hit the Road</h1>
@@ -113,9 +118,8 @@
   <p>© 2025 CarRent Inc. All rights reserved. Please Contact Maxim Comarov for details.</p>
 </footer>
 
-<!-- Mascot -->
 <div class="mascot">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Icon-carpng.png/120px-Icon-carpng.png"
+  <img src="https://cdn0.iconfinder.com/data/icons/Car_Icon_Set_BevelAndEmboss-Net/178/jeep.png" width="512px" height="512"
        alt="Car Mascot" />
   <div class="mascot-tooltip">Hi! Need help booking a car?</div>
 </div>
