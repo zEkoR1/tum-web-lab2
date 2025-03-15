@@ -6,6 +6,7 @@
   <title>CarRent - Affordable Car Rental Services</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -50,48 +51,52 @@
   <p>Rent for 3 days or more and get 15% off when you book through our mobile site.</p>
 </section>
 
-<section id="fleet">
-  <h2>Our Fleet</h2>
-  <div class="fleet-grid">
-    <div class="fleet-card">
-      <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&w=800&q=80" alt="Economy Sedan" />
-      <h3>Economy Sedan</h3>
-      <p>Perfect for city drives and short trips.</p>
+<section id="fleet" class="py-12 text-center">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">Our Fleet</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 sm:px-12">
+    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-4">
+      <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&w=800&q=80" class="rounded-t-lg" alt="Economy Sedan" />
+      <h3 class="text-lg sm:text-xl font-medium mt-4">Economy Sedan</h3>
+      <p class="text-gray-600">Perfect for city drives and short trips.</p>
     </div>
-    <div class="fleet-card">
-      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80" alt="SUV" />
-      <h3>SUV</h3>
-      <p>Spacious and comfortable for family vacations.</p>
+    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-4">
+      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80" class="rounded-t-lg" alt="SUV" />
+      <h3 class="text-lg sm:text-xl font-medium mt-4">SUV</h3>
+      <p class="text-gray-600">Spacious and comfortable for family vacations.</p>
     </div>
-    <div class="fleet-card">
-      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80" alt="Sports Car" />
-      <h3>Sports Car</h3>
-      <p>Experience the thrill of driving in style.</p>
+    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-4">
+      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80" class="rounded-t-lg" alt="Sports Car" />
+      <h3 class="text-lg sm:text-xl font-medium mt-4">Sports Car</h3>
+      <p class="text-gray-600">Experience the thrill of driving in style.</p>
     </div>
-    <div class="fleet-card">
-      <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&w=800&q=80" alt="Mini Van" />
-      <h3>Mini Van</h3>
-      <p>Great for group road trips or airport pickups.</p>
+    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-4">
+      <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&w=800&q=80" class="rounded-t-lg" alt="Mini Van" />
+      <h3 class="text-lg sm:text-xl font-medium mt-4">Mini Van</h3>
+      <p class="text-gray-600">Great for group road trips or airport pickups.</p>
     </div>
   </div>
 </section>
 
 <!-- Pricing Section -->
-<section id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-table">
-    <div class="pricing-plan">
-      <h3>Basic</h3>
-      <p class="price">$25/day</p>
-      <p>• Unlimited Miles</p>
-      <p>• Basic Insurance</p>
+<section id="pricing" class="py-12 bg-gray-100 text-center">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">Pricing</h2>
+  <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 px-6 sm:px-12">
+    <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+      <h3 class="text-xl font-medium">Basic</h3>
+      <p class="text-3xl font-bold text-orange-500 my-4">$25/day</p>
+      <ul class="text-gray-600">
+        <li>• Unlimited Miles</li>
+        <li>• Basic Insurance</li>
+      </ul>
     </div>
-    <div class="pricing-plan">
-      <h3>Premium</h3>
-      <p class="price">$45/day</p>
-      <p>• Unlimited Miles</p>
-      <p>• Full Insurance Coverage</p>
-      <p>• Roadside Assistance</p>
+    <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+      <h3 class="text-xl font-medium">Premium</h3>
+      <p class="text-3xl font-bold text-orange-500 my-4">$45/day</p>
+      <ul class="text-gray-600">
+        <li>• Unlimited Miles</li>
+        <li>• Full Insurance Coverage</li>
+        <li>• Roadside Assistance</li>
+      </ul>
     </div>
   </div>
 </section>
