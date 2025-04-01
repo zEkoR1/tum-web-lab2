@@ -124,7 +124,7 @@ section h2 {
 }
 
 /* Fleet Section */
-.fleet-grid {
+/* .fleet-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
@@ -153,10 +153,10 @@ section h2 {
 
 .fleet-card p {
     padding: 0 1rem 1rem 1rem;
-}
+} */
 
 /* Pricing Section */
-.pricing-table {
+/* .pricing-table {
     max-width: 800px;
     margin: 0 auto;
     display: grid;
@@ -180,7 +180,7 @@ section h2 {
     font-size: 2rem;
     margin: 1rem 0;
     color: #ff9900;
-}
+} */
 
 /* Contact Section */
 #contact {
